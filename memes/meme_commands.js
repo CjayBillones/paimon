@@ -201,7 +201,7 @@ module.exports = {
       },
     },
     {
-      name: "weaponbanner",
+      name: "weapon",
       description: "A bunch of meme commands",
       execute(message, _) {
         //Format: [imageLink, messageTitle, probability]
