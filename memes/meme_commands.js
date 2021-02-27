@@ -184,6 +184,47 @@ module.exports = {
         message.channel.send(embeddedMessage);
       },
     },
+    {
+      name: "homa",
+      description: "A bunch of meme commands",
+      execute(message, _) {
+        // Format: [image, title]
+        let images = [
+          ["https://imgur.com/rqrpf31", "lEt's go R5"],
+          ["https://imgur.com/KhP6cCF", "It's homa...NOT. don't be like tectone"],
+        ];
+        let [image, title] = images[getRandomInt(images.length)];
+        const embeddedMessage = new Discord.MessageEmbed()
+          .setImage(image)
+          .setTitle(title);
+        message.channel.send(embeddedMessage);
+      },
+    },
+    {
+      name: "weaponbanner",
+      description: "A bunch of meme commands",
+      execute(message, _) {
+        //Format: [imageLink, messageTitle, probability]
+        let memeBundle = [
+          ["https://imgur.com/KhP6cCF", "It's homa...NOT. don't be like tectone", 24.2],
+          ["https://imgur.com/undefined", "But at what cost?", 24.2],
+          [
+            "https://imgur.com/Vw0ja4e",
+            "Demn boI weapon banner not a scam???",
+            0.6,
+          ],
+        ];
+
+        let random_index = alias_sampler(memeBundle.map((arr) => arr[2]))();
+        let [image, title] = memeBundle[random_index];
+
+        let embeddedMessage = new Discord.MessageEmbed()
+          .setImage(image)
+          .setTitle(title);
+
+        message.channel.send(embeddedMessage);
+      },
+    },    
   ],
 };
 
