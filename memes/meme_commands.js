@@ -83,10 +83,18 @@ module.exports = {
         let memeBundle = [
           ["https://i.imgur.com/8sOXZs4.png", "Who tao", 31.73],
           ["https://imgur.com/HuCegNK.png", "Who tao", 31.73],
+          ["https://imgur.com/pkpN328", "BOO tao", 31.73],
+          ["https://imgur.com/QhdVOOG", "?swipe", 31.73],
+          ["https://imgur.com/bghIusA", "Yoh!", 31.73],
           [
             "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
             "Who tao",
             31.73,
+          ],
+          [
+            "https://imgur.com/rzR0iOm",
+            "Come home",
+            1.6,
           ],
           [
             "https://media1.tenor.com/images/60fa3413ac1ce122b3ef14f9572613eb/tenor.gif",
