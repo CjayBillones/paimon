@@ -169,6 +169,21 @@ module.exports = {
         message.channel.send(embeddedMessage);
       },
     },
+    {
+      name: "Childe",
+      description: "A bunch of meme commands",
+      execute(message, _) {
+        // Format: [image, title]
+        let images = [
+          ["https://imgur.com/fRfXJ5X", "Childe"],
+        ];
+        let [image, title] = images[getRandomInt(images.length)];
+        const embeddedMessage = new Discord.MessageEmbed()
+          .setImage(image)
+          .setTitle(title);
+        message.channel.send(embeddedMessage);
+      },
+    },
   ],
 };
 
