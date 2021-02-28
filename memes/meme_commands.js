@@ -93,12 +93,12 @@ module.exports = {
           ],
           [
             "https://imgur.com/rzR0iOm",
-            "Come home",
+            "UWU",
             1.3,
           ],
           [
             "https://media1.tenor.com/images/60fa3413ac1ce122b3ef14f9572613eb/tenor.gif",
-            "Come home",
+            "Nya Arigato",
             1.3,
           ],
           [
