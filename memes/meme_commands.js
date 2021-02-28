@@ -139,6 +139,7 @@ module.exports = {
           .setTitle(title);
         message.channel.send(embeddedMessage);
       },
+    },
     {
       name: "Diluc",
       description: "A bunch of meme commands",
