@@ -206,8 +206,8 @@ module.exports = {
       execute(message, _) {
         //Format: [imageLink, messageTitle, probability]
         let memeBundle = [
-          ["https://imgur.com/KhP6cCF", "It's homa...NOT. don't be like tectone", 24.2],
-          ["https://imgur.com/undefined", "But at what cost?", 24.2],
+          ["https://imgur.com/KhP6cCF", "It's homa...NOT. don't be like tectone", 49.7],
+          ["https://imgur.com/4nVTkqv.png", "But at what cost?", 49.7],
           [
             "https://imgur.com/Vw0ja4e",
             "Demn boI weapon banner not a scam???",
