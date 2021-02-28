@@ -81,35 +81,35 @@ module.exports = {
       description: "A bunch of meme commands",
       execute(message, _) {
         let memeBundle = [
-          ["https://i.imgur.com/8sOXZs4.png", "Who tao", 31.73],
-          ["https://imgur.com/HuCegNK.png", "Who tao", 31.73],
-          ["https://imgur.com/pkpN328", "BOO tao", 31.73],
-          ["https://imgur.com/QhdVOOG", "?swipe", 31.73],
-          ["https://imgur.com/bghIusA", "Yoh!", 31.73],
+          ["https://i.imgur.com/8sOXZs4.png", "Who tao", 15.8],
+          ["https://imgur.com/HuCegNK.png", "Who tao", 15.8],
+          ["https://imgur.com/pkpN328", "BOO tao", 15.8],
+          ["https://imgur.com/QhdVOOG", "?swipe", 15.8],
+          ["https://imgur.com/bghIusA", "Yoh!", 15.8],
           [
             "https://media.tenor.com/images/c6c37c4ad12b03fb9581de61a017fcc7/tenor.gif",
             "Who tao",
-            31.73,
+            15.8,
           ],
           [
             "https://imgur.com/rzR0iOm",
             "Come home",
-            1.6,
+            1.3,
           ],
           [
             "https://media1.tenor.com/images/60fa3413ac1ce122b3ef14f9572613eb/tenor.gif",
             "Come home",
-            1.6,
+            1.3,
           ],
           [
             "https://media1.tenor.com/images/dc73314354b09615c72b3e7b4346613b/tenor.gif",
             "Sayonara",
-            1.6,
+            1.3,
           ],
           [
             "https://pbs.twimg.com/media/Etn3A9yXMAEQij-?format=jpg&name=large",
             "Come home",
-            1.6,
+            1.3,
           ],
         ];
 
