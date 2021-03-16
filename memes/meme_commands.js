@@ -186,6 +186,21 @@ module.exports = {
       },
     },
     {
+      name: "mona",
+      description: "A bunch of meme commands",
+      execute(message, _) {
+        // Format: [image, title]
+        let images = [
+          ["https://i.redd.it/kh39rnph48g61.jpg", "mona..?"],
+        ];
+        let [image, title] = images[getRandomInt(images.length)];
+        const embeddedMessage = new Discord.MessageEmbed()
+          .setImage(image)
+          .setTitle(title);
+        message.channel.send(embeddedMessage);
+      },
+    },
+    {
       name: "homa",
       description: "A bunch of meme commands",
       execute(message, _) {
