@@ -14,8 +14,8 @@ module.exports = {
   description: "Returns a google sheet link of the whale leaderboard",
   async execute(message, args) {
     const costMap = {
-      BP1K: 0,
-      BP500: 1,
+      BP500: 0,
+      BP1K: 1,
       Welkin: 2,
       GC5000: 3,
       GC2500: 4,
