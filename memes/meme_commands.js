@@ -242,12 +242,12 @@ module.exports = {
       execute(message, _) {
         //Format: [imageLink, messageTitle, probability]
         let memeBundle = [
-          ["https://imgur.com/YcYvEnq", "Come home", 0.6],
-          ["https://imgur.com/8KB71YH", "Come home", 0.6],
-          ["https://imgur.com/SwdCmpi", "Come home", 0.6],
-          ["https://imgur.com/oGUAFGq", "Come home", 0.6],
-          ["https://imgur.com/K2NS9uR", "Come home", 0.6],
-          ["https://imgur.com/RbmtixQ", "Come home", 0.6],
+          ["https://i.imgur.com/YcYvEnq.jpg", "Come home", 0.6],
+          ["https://i.imgur.com/8KB71YH.jpg", "Come home", 0.6],
+          ["https://i.imgur.com/SwdCmpi.jpg", "Come home", 0.6],
+          ["https://i.imgur.com/oGUAFGq.jpg", "Come home", 0.6],
+          ["https://i.imgur.com/K2NS9uR.jpg", "Come home", 0.6],
+          ["https://i.imgur.com/RbmtixQ.jpg", "Come home", 0.6],
           [
             "https://i.redd.it/8fhhnt8cxse61.jpg",
             "No Eula for you! Roll another pity LOL!",
