@@ -77,7 +77,6 @@ async function linkUID(message, genshinUID) {
   return status
 }
 
-
 function validateArgs(args) {
   if(args.length > 1) {
     return false;
@@ -94,7 +93,7 @@ function validateGenshinUID(genshinUID) {
 }
 
 function filterInt(value) {
-  if (/^[-+]?(\d+|Infinity)$/.test(value)) {
+  if (/^[0-9]*$/.test(value)) {
     return Number(value);
   } else {
     return NaN;
@@ -111,8 +110,7 @@ function fail(message, error = null) {
 }
 
 function sendHelpMessage(message){
-  var embed = new Discord.MessageEmbed()
-                         .setColor("#FF0000");
+  var embed = new Discord.MessageEmbed().setColor("#FF0000");
 
   embed.addFields(
     {
@@ -129,8 +127,7 @@ function sendHelpMessage(message){
 }
 
 function sendGenshinUIDHelpMessage(message) {
-  var embed = new Discord.MessageEmbed()
-                         .setColor("#FF0000");
+  var embed = new Discord.MessageEmbed().setColor("#FF0000");
   embed.addFields(
     {
       name: "Invalid UID Format",
