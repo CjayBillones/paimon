@@ -8,6 +8,17 @@ const TOKEN = process.env.TOKEN;
 const readline = require("readline");
 const { google } = require("googleapis");
 
+const firebase = require("firebase/app");
+require("firebase/firestore");
+
+const firebaseConfig = {
+  apiKey: process.env.FIREBASE_API_KEY,
+  appId: process.env.FIREBASE_APP_ID,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+}
+
+firebase.initializeApp(firebaseConfig);
+
 bot.commands = new Discord.Collection();
 
 const commandFiles = fs
