@@ -27,7 +27,7 @@ module.exports = {
 
     if (args.length === 0) {
       message.channel.send(
-        "https://docs.google.com/spreadsheets/d/1nS08D0UI0vCBBropXBRxFEEG076MDoV9b53VgIxfnlc/edit?usp=sharing"
+        "https://docs.google.com/spreadsheets/d/1jiEO3Ciq7Hb8ggo5Ix3GH5_VqjHR5ndYAJ7OR3AVtRA/edit#gid=0"
       );
     } else {
       const str_UID = args[0];
