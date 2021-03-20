@@ -5,6 +5,9 @@ const bot = new Discord.Client();
 const fs = require("fs");
 const TOKEN = process.env.TOKEN;
 
+const readline = require("readline");
+const { google } = require("googleapis");
+
 bot.commands = new Discord.Collection();
 
 const commandFiles = fs
