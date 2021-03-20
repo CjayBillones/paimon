@@ -3,7 +3,7 @@ const { google } = require("googleapis");
 const JwtClient = new google.auth.JWT(
   process.env.EMAIL,
   null,
-  process.env.KEY,
+  process.env.KEY.replace(/\\n/gm, "\n"),
   ["https://www.googleapis.com/auth/spreadsheets"]
 );
 
