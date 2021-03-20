@@ -16,15 +16,15 @@ module.exports = {
   description: "Returns a google sheet link of the whale leaderboard",
   async execute(message, args) {
     const costMap = {
-      BP500: 0,
-      BP1K: 1,
-      Welkin: 2,
-      GC5000: 3,
-      GC2500: 4,
-      GC1500: 5,
-      GC750: 6,
-      GC250: 7,
-      GC50: 8,
+      bp500: 0,
+      bp1k: 1,
+      welkin: 2,
+      gc5000: 3,
+      gc2500: 4,
+      gc1500: 5,
+      gc750: 6,
+      gc250: 7,
+      gc50: 8,
     };
 
     if (args.length === 0) {
@@ -39,13 +39,13 @@ module.exports = {
         return
       }
       const UID = filterInt(str_UID);
-      const item = costMap[args[0]];
+      const item = costMap[args[0].toLowerCase()];
 
       if (isNaN(UID)) {
         message.channel.send("UID is not a number.");
       } else if (str_UID.length !== 9) {
         message.channel.send("Invalid UID length.");
-      } else if (!(args[0] in costMap)) {
+      } else if (!(args[0].toLowerCase() in costMap)) {
         message.channel.send(
           "🔴 Swiped item is invalid. Please use command ?swipe_help for the correct items."
         );
