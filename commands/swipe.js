@@ -39,13 +39,14 @@ module.exports = {
         return
       }
       const UID = filterInt(str_UID);
-      const item = costMap[args[0].toLowerCase()];
+      const item_code = args[0].toLowerCase();
+      const item = costMap[item_code];
 
       if (isNaN(UID)) {
         message.channel.send("UID is not a number.");
       } else if (str_UID.length !== 9) {
         message.channel.send("Invalid UID length.");
-      } else if (!(args[0].toLowerCase() in costMap)) {
+      } else if (!(item_code in costMap)) {
         message.channel.send(
           "🔴 Swiped item is invalid. Please use command ?swipe_help for the correct items."
         );
@@ -58,13 +59,13 @@ module.exports = {
           valueInputOption: "USER_ENTERED",
           resource: {
             majorDimension: "ROWS",
-            values: [[str_UID, date, item]],
+            values: [[str_UID, date, item, item_code]],
           },
         });
 
         if (response != null) {
           message.channel.send(
-            "🟢 Successfully swiped " + args[0] + " for UID: " + str_UID
+            "🟢 Successfully swiped " + item_code + " for UID: " + str_UID
           );
         } else {
           message.channel.send("🔴 Error swiping");
