@@ -91,11 +91,7 @@ module.exports = {
             "Who tao",
             15.8,
           ],
-          [
-            "https://imgur.com/rzR0iOm.gif",
-            "UWU",
-            1.3,
-          ],
+          ["https://imgur.com/rzR0iOm.gif", "UWU", 1.3],
           [
             "https://media1.tenor.com/images/60fa3413ac1ce122b3ef14f9572613eb/tenor.gif",
             "Nya Arigato",
@@ -145,9 +141,7 @@ module.exports = {
       description: "A bunch of meme commands",
       execute(message, _) {
         // Format: [image, title]
-        let images = [
-          ["https://imgur.com/83fAdFm.png", "Kiluc"],
-        ];
+        let images = [["https://imgur.com/83fAdFm.png", "Kiluc"]];
         let [image, title] = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
           .setImage(image)
@@ -160,9 +154,7 @@ module.exports = {
       description: "A bunch of meme commands",
       execute(message, _) {
         // Format: [image, title]
-        let images = [
-          ["https://imgur.com/s6xMcZd.png", "Dlee"],
-        ];
+        let images = [["https://imgur.com/s6xMcZd.png", "Dlee"]];
         let [image, title] = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
           .setImage(image)
@@ -175,9 +167,7 @@ module.exports = {
       description: "A bunch of meme commands",
       execute(message, _) {
         // Format: [image, title]
-        let images = [
-          ["https://imgur.com/fRfXJ5X.png", "Childe"],
-        ];
+        let images = [["https://imgur.com/fRfXJ5X.png", "Childe"]];
         let [image, title] = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
           .setImage(image)
@@ -190,9 +180,7 @@ module.exports = {
       description: "A bunch of meme commands",
       execute(message, _) {
         // Format: [image, title]
-        let images = [
-          ["https://i.redd.it/kh39rnph48g61.jpg", "mona..?"],
-        ];
+        let images = [["https://i.redd.it/kh39rnph48g61.jpg", "mona..?"]];
         let [image, title] = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
           .setImage(image)
@@ -207,7 +195,10 @@ module.exports = {
         // Format: [image, title]
         let images = [
           ["https://imgur.com/rqrpf31.png", "lEt's go R5"],
-          ["https://imgur.com/KhP6cCF.gif", "It's homa...NOT. don't be like tectone"],
+          [
+            "https://imgur.com/KhP6cCF.gif",
+            "It's homa...NOT. don't be like tectone",
+          ],
         ];
         let [image, title] = images[getRandomInt(images.length)];
         const embeddedMessage = new Discord.MessageEmbed()
@@ -222,7 +213,11 @@ module.exports = {
       execute(message, _) {
         //Format: [imageLink, messageTitle, probability]
         let memeBundle = [
-          ["https://imgur.com/KhP6cCF.gif", "It's homa...NOT. don't be like tectone", 49.7],
+          [
+            "https://imgur.com/KhP6cCF.gif",
+            "It's homa...NOT. don't be like tectone",
+            49.7,
+          ],
           ["https://imgur.com/4nVTkqv.png", "But at what cost?", 49.7],
           [
             "https://imgur.com/Vw0ja4e.png",
@@ -240,7 +235,36 @@ module.exports = {
 
         message.channel.send(embeddedMessage);
       },
-    },    
+    },
+    {
+      name: "eula",
+      description: "A bunch of meme commands",
+      execute(message, _) {
+        //Format: [imageLink, messageTitle, probability]
+        let memeBundle = [
+          ["https://imgur.com/YcYvEnq", "Come home", 0.6],
+          ["https://imgur.com/8KB71YH", "Come home", 0.6],
+          ["https://imgur.com/SwdCmpi", "Come home", 0.6],
+          ["https://imgur.com/oGUAFGq", "Come home", 0.6],
+          ["https://imgur.com/K2NS9uR", "Come home", 0.6],
+          ["https://imgur.com/RbmtixQ", "Come home", 0.6],
+          [
+            "https://i.redd.it/8fhhnt8cxse61.jpg",
+            "No Eula for you! Roll another pity LOL!",
+            96.4,
+          ],
+        ];
+
+        let random_index = alias_sampler(memeBundle.map((arr) => arr[2]))();
+        let [image, title] = memeBundle[random_index];
+
+        let embeddedMessage = new Discord.MessageEmbed()
+          .setImage(image)
+          .setTitle(title);
+
+        message.channel.send(embeddedMessage);
+      },
+    },
   ],
 };
 
