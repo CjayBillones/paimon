@@ -102,11 +102,11 @@ function getCounts(arg3, arg4) {
   var counts = {}
 
   if(arg3.charAt(0) == "c") {
-    counts["chars"] = arg3.charAt(2);
-    counts["weapons"] = arg4 && arg4.charAt(2);
+    counts["chars"] = arg3.charAt(5);
+    counts["weapons"] = arg4 && arg4.charAt(5);
   } else {
-    counts["weapons"] = arg3.charAt(2);
-    counts["chars"] = arg4 && arg4.charAt(2)
+    counts["weapons"] = arg3.charAt(5);
+    counts["chars"] = arg4 && arg4.charAt(5)
   }
 
   return counts
