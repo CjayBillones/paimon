@@ -29,9 +29,7 @@ module.exports = {
     };
 
     if (args.length === 0) {
-      message.channel.send(
-        "https://docs.google.com/spreadsheets/d/1jiEO3Ciq7Hb8ggo5Ix3GH5_VqjHR5ndYAJ7OR3AVtRA/edit#gid=0"
-      );
+      message.channel.send(process.env.SPREADSHEET_LINK);
       sendHelpMessage(message);
     } else {
       const str_UID = await fetchUID(message.author.id);
@@ -58,7 +56,7 @@ module.exports = {
         let date = new Date().toUTCString().substr(0, 25);
 
         const response = await client.spreadsheets.values.append({
-          spreadsheetId: "1jiEO3Ciq7Hb8ggo5Ix3GH5_VqjHR5ndYAJ7OR3AVtRA",
+          spreadsheetId: process.env.SPREADSHEET_ID,
           range: "Top-up History!A1:D1",
           valueInputOption: "USER_ENTERED",
           resource: {
