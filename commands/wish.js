@@ -103,7 +103,7 @@ function getCounts(arg3, arg4) {
 
   if(arg3.charAt(0) == "c") {
     counts["chars"] = arg3.slice(5);
-    counts["weapons"] = arg4 && arg4.slice(51);
+    counts["weapons"] = arg4 && arg4.slice(5);
   } else {
     counts["weapons"] = arg3.slice(5);
     counts["chars"] = arg4 && arg4.slice(5)
