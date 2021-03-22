@@ -88,6 +88,7 @@ function validateArgs(args, message) {
   if (args[0].length > 1 && !banners.includes(args[0].toLowerCase())) {
     return false;
   }
+
   if (
     args[0].length == 1 &&
     !banners.map((x) => x[0]).includes(args[0].toLowerCase())
@@ -102,6 +103,7 @@ function validateArgs(args, message) {
   if (!/((char)|(weap))=\d+$/.test(args[2])) {
     return false;
   }
+
   if (args[3] && !/((char)|(weap))=\d+$/.test(args[3])) {
     return false;
   }
