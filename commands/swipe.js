@@ -1,4 +1,5 @@
 const { google } = require("googleapis");
+const Discord = require("discord.js");
 
 const JwtClient = new google.auth.JWT(
   process.env.EMAIL,
@@ -9,7 +10,7 @@ const JwtClient = new google.auth.JWT(
 
 const client = google.sheets({ version: "v4", auth: JwtClient });
 
-const { fetchUID } = require("../helpers/fetch_uid")
+const { fetchUID } = require("../helpers/fetch_uid");
 
 module.exports = {
   name: "swipe",
@@ -31,12 +32,15 @@ module.exports = {
       message.channel.send(
         "https://docs.google.com/spreadsheets/d/1jiEO3Ciq7Hb8ggo5Ix3GH5_VqjHR5ndYAJ7OR3AVtRA/edit#gid=0"
       );
+      sendHelpMessage(message);
     } else {
       const str_UID = await fetchUID(message.author.id);
-      if(!str_UID) {
-        message.channel.send("🔴 You don't have a linked UID. Please use ?uid to link your UID")
+      if (!str_UID) {
+        message.channel.send(
+          "🔴 You don't have a linked UID. Please use ?uid to link your UID"
+        );
 
-        return
+        return;
       }
       const UID = filterInt(str_UID);
       const item_code = args[0].toLowerCase();
@@ -48,7 +52,7 @@ module.exports = {
         message.channel.send("Invalid UID length.");
       } else if (!(item_code in costMap)) {
         message.channel.send(
-          "🔴 Swiped item is invalid. Please use command ?swipe_help for the correct items."
+          "🔴 Swiped item is invalid. Please use command ?swipe for the correct items."
         );
       } else {
         let date = new Date().toUTCString().substr(0, 25);
@@ -81,4 +85,15 @@ function filterInt(value) {
   } else {
     return NaN;
   }
+}
+
+function sendHelpMessage(message) {
+  var embed = new Discord.MessageEmbed().setColor("#FF0000");
+
+  embed.addFields({
+    name: "Use the format ?swipe {ITEM} where ITEM can be:",
+    value: "BP1K\nBP500\nWelkin\nGC5000\nGC2500\nGC1500\nGC750\nGC250\nGC50",
+  });
+
+  message.channel.send(embed);
 }
