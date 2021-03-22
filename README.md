@@ -39,15 +39,11 @@ The `?swipe` and `?wish` commands are special commands that're being used by our
 
 ## Google Sheets Link
 
-Linking to google sheets requires creating a google service account that has edit access to that sheet. Follow the link below to create your own google service account.
-
-https://cloud.google.com/iam/docs/creating-managing-service-accounts
+Linking to google sheets requires creating a google service account that has edit access to that sheet. Follow [this link](https://cloud.google.com/iam/docs/creating-managing-service-accounts)  to create your own google service account.
 
 - Note that another account hosts/stores the google sheet, (yours or other actual google accounts) not the google service account.
 - After creating the service account, shared your google sheet to the service account with edit permissions.
-- You need to also generate a public/private key pair for your service account, follow the link below to generate your keys.
-
-https://cloud.google.com/iam/docs/creating-managing-service-account-keys
+- You need to also generate a public/private key pair for your service account, follow [this link](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) to generate your keys.
 
 ### Required .env Variables
 
