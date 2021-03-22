@@ -79,8 +79,8 @@ function validateArgs(args, message) {
 
   if(!/^[0-9]*$/.test(args[1])) { return false };
 
-  if(!/[cw]=\d+$/.test(args[2])) { return false };
-  if(args[3] && !/[cw]=\d+$/.test(args[3])) { return false };
+  if(!/((char)|(weap))=\d+$/.test(args[2])) { return false };
+  if(args[3] && !/((char)|(weap))=\d+$/.test(args[3])) { return false };
 
   if(args[0].length == 1) { args[0] = shorthandBanners[args[0]] };
 
@@ -118,7 +118,7 @@ function sendHelpMessage(message){
   embed.addFields(
     {
       name: "Log your wishes",
-      value: "`?wish <banner> <number of pulls> [c=<num>|w=<num>]`"
+      value: "`?wish <banner> <number of pulls> [char=<num>|weap=<num>]`"
     },
     { 
       name: "Banner options",
@@ -126,11 +126,11 @@ function sendHelpMessage(message){
     },
     {
       name: "Example for pulling one 5star character with 65 pulls on character b anner",
-      value: "`?wish character 65 c=1`"
+      value: "`?wish character 65 char=1`"
     },
     {
       name: "Banner options can be replaced by their first letters",
-      value: "`?wish c 65 c=1`"
+      value: "`?wish c 65 char=1`"
     }
   )
 
