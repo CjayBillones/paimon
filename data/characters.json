@@ -171,13 +171,19 @@
     "name": "Xiao",
     "element": "Anemo",
     "weaponType": "Polearm",
-    "materials": "https://i.imgur.com/x04p6mc.png"
+    "materials": "https://imgur.com/arKMK5E.png"
   },
   "hutao": {
     "name": "Hu Tao",
     "element": "Pyro",
     "weaponType": "Polearm",
-    "materials": "https://i.imgur.com/JCKjyrL.png"
+    "materials": "https://imgur.com/qa9Me05.png"
+  },
+  "rosaria": {
+    "name": "Rosaria",
+    "element": "Cryo",
+    "weaponType": "Polearm",
+    "materials": "https://imgur.com/0rn4ozC.png"
   },
   "ayaka": {
     "name": "Ayaka",
