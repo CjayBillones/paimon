@@ -185,6 +185,12 @@
     "weaponType": "Polearm",
     "materials": "https://imgur.com/0rn4ozC.png"
   },
+  "yanfei": {
+    "name": "Yanfei",
+    "element": "Pyro",
+    "weaponType":"Catalyst",
+    "materials": "https://imgur.com/2ewXt5g.png"
+  },
   "ayaka": {
     "name": "Ayaka",
     "element": "Cryo",

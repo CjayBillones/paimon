@@ -9,7 +9,7 @@ module.exports = {
     } else if(args[0].toLowerCase() === "weapon"){
       message.channel.send("https://imgur.com/ko1zwgo");
     } else if(args[0].toLowerCase() === "talent"){
-      message.channel.send("https://imgur.com/VI9slUh.png");
+      message.channel.send("https://imgur.com/eIhGhmb.png");
     } else{
       sendHelpMessage(message);
     }
