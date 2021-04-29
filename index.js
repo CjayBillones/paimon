@@ -30,6 +30,9 @@ for (const file of commandFiles) {
   bot.commands.set(command.name, command);
 }
 
+const restrictedCommands = ["swipe", "uid", "wish"];
+const permittedServers = ["768503430414336000", "757277890281734149"];
+
 const memes = require(`./memes/meme_commands.js`);
 memes.commands.forEach((command) => {
   bot.commands.set(command.name, command);
@@ -48,6 +51,8 @@ bot.on("message", (message) => {
 
   if (!bot.commands.has(commandName)) return;
   const command = bot.commands.get(commandName);
+
+  if (restrictedCommands.includes(command.name) && !permittedServers.includes(message.channel.guild.id)) return;
   command.execute(message, args);
 });
 
