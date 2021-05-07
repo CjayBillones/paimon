@@ -10,7 +10,9 @@ module.exports = {
   description: "Links UID to Discord user",
   async execute(message, args) {
     try {
-      if (!validateArgs(args)) fail(message);
+      var mentionedUser = Array.from(message.mentions.users)[0]
+
+      if (!validateArgs(args, mentionedUser)) fail(message);
 
       if (args.length == 0) {
         var uid = await lookupUID(message.author.id);
@@ -20,7 +22,19 @@ module.exports = {
           message.channel.send("🔴 You don't have a linked UID.");
           sendHelpMessage(message);
         }
-      } else {
+      } else if (mentionedUser) {
+        mentionedUser = mentionedUser[1]
+          
+        var uid = await lookupUID(mentionedUser.id);
+
+        if (uid) {
+          message.channel.send(`🟢 Linked UID for ${mentionedUser.username}. UID: ${uid}`);
+        } else {
+          message.channel.send(`🔴 No linked ID for ${mentionedUser.username}`);
+          sendHelpMessage(message);
+        }
+      } else
+      {
         if (!validateGenshinUID(args[0])) fail(message, "GenshinUID");
 
         if (await linkUID(message, args[0])) {
@@ -87,8 +101,11 @@ async function linkUID(message, genshinUID) {
   return status;
 }
 
-function validateArgs(args) {
-  if (args.length > 1) {
+function validateArgs(args, mentionedUser) {
+  if (args.length == 1 && mentionedUser) {
+    return true;
+  }
+  else if (args.length > 1) {
     return false;
   }
   return true;
