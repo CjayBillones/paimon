@@ -242,16 +242,32 @@ module.exports = {
       execute(message, _) {
         //Format: [imageLink, messageTitle, probability]
         let memeBundle = [
-          ["https://i.imgur.com/YcYvEnq.jpg", "Come home", 0.6],
-          ["https://i.imgur.com/8KB71YH.jpg", "Come home", 0.6],
-          ["https://i.imgur.com/SwdCmpi.jpg", "Come home", 0.6],
-          ["https://i.imgur.com/oGUAFGq.jpg", "Come home", 0.6],
-          ["https://i.imgur.com/K2NS9uR.jpg", "Come home", 0.6],
-          ["https://i.imgur.com/RbmtixQ.jpg", "Come home", 0.6],
           [
-            "https://i.redd.it/8fhhnt8cxse61.jpg",
-            "No Eula for you! Roll another pity LOL!",
-            96.4,
+            "https://media1.tenor.com/images/e04a04de8b0502b9937232265d07103c/tenor.gif?itemid=21515943",
+            "Come home",
+            0.6,
+          ],
+
+          [
+            " https://media1.tenor.com/images/28ce3ac14feaef9263601306b8f4168a/tenor.gif?itemid=21512799",
+            "Come home",
+            0.6,
+          ],
+          [
+            "https://media1.tenor.com/images/8e800416f9ec617936502298c353e252/tenor.gif?itemid=21512790",
+            "Come home",
+            0.6,
+          ],
+          ["https://i.redd.it/9d2yoy8z0fy61.png", "Come home", 0.6],
+          [
+            "https://pbs.twimg.com/media/E1FGtDwVUAE4wyY?format=jpg&name=medium",
+            "Come home",
+            0.6,
+          ],
+          [
+            "https://pbs.twimg.com/media/E1FGtqfVkAc68WU?format=jpg&name=medium",
+            "Come home",
+            0.6,
           ],
         ];
 
